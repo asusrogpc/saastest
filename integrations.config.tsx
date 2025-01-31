@@ -1,5 +1,5 @@
 const integrations = {
-	isSanityEnabled: false,
+	isSanityEnabled: true,
 	isOpenAIEnabled: false,
 	isAlgoliaEnabled: false,
 	isMailchimpEnabled: false,

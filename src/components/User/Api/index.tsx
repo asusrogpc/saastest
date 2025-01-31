@@ -4,14 +4,14 @@ import TokenList from "./TokenList";
 import { getApiKeys } from "@/actions/api-key";
 
 const APIKey = async () => {
-	const tokens = await getApiKeys();
+  const tokens = await getApiKeys();
 
-	return (
-		<>
-			<CreateToken />
-			<TokenList tokens={tokens} />
-		</>
-	);
+  return (
+    <>
+      <CreateToken />
+      <TokenList tokens={tokens} />
+    </>
+  );
 };
 
 export default APIKey;

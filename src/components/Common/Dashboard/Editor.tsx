@@ -4,32 +4,32 @@ import { LegacyRef, useRef } from "react";
 import type ReactQuill from "react-quill";
 
 interface IWrappedComponent extends React.ComponentProps<typeof ReactQuill> {
-	forwardedRef: LegacyRef<ReactQuill>;
+  forwardedRef: LegacyRef<ReactQuill>;
 }
 
 const ReactQuillBase = dynamic(
-	async () => {
-		const { default: RQ } = await import("react-quill");
+  async () => {
+    const { default: RQ } = await import("react-quill");
 
-		function QuillJS({ forwardedRef, ...props }: IWrappedComponent) {
-			return <RQ ref={forwardedRef} {...props} />;
-		}
+    function QuillJS({ forwardedRef, ...props }: IWrappedComponent) {
+      return <RQ ref={forwardedRef} {...props} />;
+    }
 
-		return QuillJS;
-	},
-	{
-		ssr: false,
-	}
+    return QuillJS;
+  },
+  {
+    ssr: false,
+  }
 );
 
 export function Editor() {
-	const quillRef = useRef<ReactQuill>(null);
+  const quillRef = useRef<ReactQuill>(null);
 
-	return (
-		<>
-			<div>
-				<ReactQuillBase forwardedRef={quillRef} />
-			</div>
-		</>
-	);
+  return (
+    <>
+      <div>
+        <ReactQuillBase forwardedRef={quillRef} />
+      </div>
+    </>
+  );
 }

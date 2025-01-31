@@ -12,20 +12,20 @@ import Newsletter from "./Newsletter";
 import { integrations } from "../../../integrations.config";
 
 const Home = () => {
-	return (
-		<>
-			<Hero />
-			<Features />
-			<FeaturesWithImage />
-			<Counter />
-			<CallToAction />
-			<Testimonials />
-			<Pricing />
-			<FAQ />
-			<Newsletter />
-			{integrations?.isSanityEnabled && <Blog />}
-		</>
-	);
+  return (
+    <>
+      <Hero />
+      <Features />
+      <FeaturesWithImage />
+      <Counter />
+      <CallToAction />
+      <Testimonials />
+      <Pricing />
+      <FAQ />
+      <Newsletter />
+      {integrations?.isSanityEnabled && <Blog />}
+    </>
+  );
 };
 
 export default Home;

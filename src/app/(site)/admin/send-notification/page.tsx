@@ -3,16 +3,16 @@ import Breadcrumb from "@/components/Common/Dashboard/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: `Send Notification - ${process.env.SITE_NAME}`,
-	description: `Send Notification Description`,
+  title: `Send Notification - ${process.env.SITE_NAME}`,
+  description: `Send Notification Description`,
 };
 
 export default function SendNotificationPage() {
-	return (
-		<>
-			<Breadcrumb pageTitle='Send Notification' />
+  return (
+    <>
+      <Breadcrumb pageTitle='Send Notification' />
 
-			<SendNotificationCard />
-		</>
-	);
+      <SendNotificationCard />
+    </>
+  );
 }

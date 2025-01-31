@@ -25,12 +25,14 @@
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:react/recommended",
-		"plugin:react-hooks/recommended",
 		"prettier"
 	],
 	"plugins": ["@typescript-eslint", "prettier"],
 	"rules": {
-		"prettier/prettier": "error",
+		"prettier/prettier": ["error", {
+			"tabWidth": 2,
+			"useTabs": false
+		}],
 		// Add any additional rules or overrides here
 		"no-console": [
 			"warn",
@@ -40,7 +42,7 @@
 		],
 		"no-empty": "warn",
 		"no-cond-assign": ["error", "always"],
-		"indent": ["error", "tab"],
+		"indent": ["error", 2],
 		"quotes": [
 			"warn",
 			"double",

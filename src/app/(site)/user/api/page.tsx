@@ -5,21 +5,21 @@ import { Metadata } from "next";
 import { getApiKeys } from "@/actions/api-key";
 
 export const metadata: Metadata = {
-	title: `API - ${process.env.SITE_NAME}`,
-	description: `API Key page for ${process.env.SITE_NAME}`,
-	// other discriptions
+  title: `API - ${process.env.SITE_NAME}`,
+  description: `API Key page for ${process.env.SITE_NAME}`,
+  // other discriptions
 };
 
 export default async function UserApiPage() {
-	const tokens = await getApiKeys();
+  const tokens = await getApiKeys();
 
-	return (
-		<>
-			<Breadcrumb pageTitle='API' />
-			<div className='flex flex-col gap-y-10 lg:flex-row lg:gap-x-8 lg:gap-y-4'>
-				<CreateToken />
-				<TokenList tokens={tokens} />
-			</div>
-		</>
-	);
+  return (
+    <>
+      <Breadcrumb pageTitle='API' />
+      <div className='flex flex-col gap-y-10 lg:flex-row lg:gap-x-8 lg:gap-y-4'>
+        <CreateToken />
+        <TokenList tokens={tokens} />
+      </div>
+    </>
+  );
 }

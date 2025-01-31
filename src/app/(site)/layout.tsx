@@ -9,27 +9,27 @@ import FooterWrapper from "@/components/Footer/FooterWrapper";
 import { HeaderWrapper } from "@/components/Header/HeaderWrapper";
 
 export default function RootLayout({
-	children,
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-	return (
-		<>
-			<Loader />
-			<>
-				<ToastContext />
-				<Providers>
-					<NextTopLoader
-						color='#635BFF'
-						crawlSpeed={300}
-						showSpinner={false}
-						shadow='none'
-					/>
-					<HeaderWrapper />
-					{children}
-					<FooterWrapper />
-				</Providers>
-			</>
-		</>
-	);
+  return (
+    <>
+      <Loader />
+      <>
+        <ToastContext />
+        <Providers>
+          <NextTopLoader
+            color='#635BFF'
+            crawlSpeed={300}
+            showSpinner={false}
+            shadow='none'
+          />
+          <HeaderWrapper />
+          {children}
+          <FooterWrapper />
+        </Providers>
+      </>
+    </>
+  );
 }

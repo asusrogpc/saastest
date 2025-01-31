@@ -4,19 +4,19 @@ import { Metadata } from "next";
 import Notification from "@/components/Common/Notification";
 
 export const metadata: Metadata = {
-	title: `Notifications - ${process.env.SITE_NAME}`,
-	description: `Notifications Description`,
+  title: `Notifications - ${process.env.SITE_NAME}`,
+  description: `Notifications Description`,
 };
 
 const NotificationPage = () => {
-	const data = [1, 2, 3, 4, 5, 6, 7];
+  const data = [1, 2, 3, 4, 5, 6, 7];
 
-	return (
-		<>
-			<Breadcrumb pageTitle='Notifications' />
-			{data?.map((data) => <Notification key={data} />)}
-		</>
-	);
+  return (
+    <>
+      <Breadcrumb pageTitle='Notifications' />
+      {data?.map((data) => <Notification key={data} />)}
+    </>
+  );
 };
 
 export default NotificationPage;

@@ -1,3 +1,3 @@
 interface Window {
   Cal?: any;
-}
+} 

@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 const CalendarPage = () => {
   return (
     <>
-      <Breadcrumb pageTitle='Calendar' />
+      <Breadcrumb pageTitle="Calendar" />
       <Calendar />
     </>
   );
 };
 
-export default CalendarPage;
+export default CalendarPage; 

@@ -5,7 +5,6 @@ const integrations = {
   isMailchimpEnabled: false,
   isAuthEnabled: true,
   isPaymentsEnabled: false,
-  isCalEnabled: false,
 };
 
 const messages = {
@@ -88,20 +87,6 @@ const messages = {
   s3: (
     <div style={{ whiteSpace: "pre-wrap" }}>
       S3 is not enabled. Follow the{" "}
-      <a
-        href='https://docs.saasbold.com/integrations/enable-or-disable-integrations'
-        className='text-primary underline'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        documentation
-      </a>{" "}
-      to enable it.
-    </div>
-  ),
-  cal: (
-    <div style={{ whiteSpace: "pre-wrap" }}>
-      Cal.com is not enabled. Follow the{" "}
       <a
         href='https://docs.saasbold.com/integrations/enable-or-disable-integrations'
         className='text-primary underline'
